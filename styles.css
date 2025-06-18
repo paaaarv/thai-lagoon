@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Merienda:wght@300..900&display=swap');
+
+/* css reset*/ 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*global variables */ 
+
+:root {
+  --seafoam: #9FE2BF;
+  --white: #E1E0C9;
+  --blue: #204D61;
+}
+
+body{
+    background-color: var(--seafoam);
+    color: var(--blue);
+    margin: 0;
+    font-family: "EB Garamond", serif; 
+}
+
+h1, h2{
+     font-family: "Merienda", sans-serif; 
+
+}
+#heading, #footer{
+    background-color: var(--blue); 
+    color: var(--white); 
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+} 
+#heading img{
+    width: 10%;
+    height: auto; 
+}
+#navigation {
+    width: 60%;
+}
+#navigation a{
+    text-decoration: none; 
+    color: var(--white);
+}
+
+
+
+/* desktop size queries */ 
+@media screen and (min-width: 850px){
+
+    #navigation ul{
+        display: flex; 
+        justify-content: space-evenly; 
+    }
+
+    #about, #deals{
+        width: 50%;
+    }
+    .placeholder{
+        display: flex; 
+    }
+}
