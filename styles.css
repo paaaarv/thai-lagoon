@@ -67,13 +67,25 @@ body{
 
 h1, h2{
      font-family: "Merienda", sans-serif; 
-
+}
+h1{
+    font-size: 3em; 
+    margin-bottom: 10px;
+    text-align: center;
+}
+h2{
+    font-size: 2em; 
+}
+img{
+    object-fit: contain;
+    max-width:100%;
 }
 #heading, #footer{
     background-color: var(--blue); 
     color: var(--white); 
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 10px;
     align-items: center;
     text-align: center;
@@ -89,7 +101,14 @@ h1, h2{
     text-decoration: none; 
     color: var(--white);
 }
-
+#home-page-img{
+    height: 100vh; 
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+#home-page-img img{
+    max-width: 100vw; 
+}
 
 
 /* desktop size queries */ 
@@ -103,7 +122,17 @@ h1, h2{
     #about, #deals{
         width: 50%;
     }
+    .image-container{
+        width: 50%;
+    }
     .placeholder{
         display: flex; 
+    }
+    #contributor{
+        width: 100%;
+    }
+
+    #footer div{
+        margin: 10px; 
     }
 }
