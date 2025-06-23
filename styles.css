@@ -57,6 +57,10 @@ table {
   --white: #E1E0C9;
   --blue: #204D61;
 }
+html{
+     max-width: 1280px;
+    margin: auto;
+}
 
 body{
     background-color: var(--seafoam);
@@ -75,6 +79,7 @@ h1{
 }
 h2{
     font-size: 2em; 
+    margin-bottom: 20px;
 }
 img{
     object-fit: contain;
@@ -110,7 +115,62 @@ img{
     max-width: 100vw; 
 }
 
+.image-container{
+    display:flex;
+    align-items: center;
+}
+.image-container img, #maps{ 
+     max-height: 500px;
+    height: auto;
+    width: auto;
+    border-radius: 20px;
+    border: 10px solid var(--blue);
+}
 
+.placeholder{
+    margin-bottom: 20px;
+}
+#deals{
+    flex-direction: row-reverse;
+}
+#contact h2{
+    text-align: center;
+}
+ #contact input, #contact textarea{
+        background-color: var(--white); 
+        border: 5px solid var(--seafoam); 
+        border-radius: 10px; 
+        padding: 10px; 
+        margin: 10px;
+    }
+#contact label{
+    color: var(--white);
+    font-size: 1.5em; 
+    align-content: center;
+}
+#contact input, #contact textarea{
+    width: 70%;
+}
+
+#contact-form{
+    background-color: var(--blue); 
+    padding: 40px; 
+    border-radius: 20px;
+}
+
+#contact{
+    margin: 100px auto; 
+}
+
+
+#form-submit{
+    padding: 20px 10px; 
+    width: 80%; 
+    background-color: var(--white); 
+    border: 5px solid var(--seafoam);
+    border-radius: 10px;
+    margin: 10px auto;
+}
 /* desktop size queries */ 
 @media screen and (min-width: 850px){
 
@@ -119,14 +179,34 @@ img{
         justify-content: space-evenly; 
     }
 
-    #about, #deals{
-        width: 50%;
-    }
-    .image-container{
-        width: 50%;
-    }
+    .p-section{
+    width: 35%;
+    align-self: center;
+    margin: 20px;
+}
     .placeholder{
         display: flex; 
+        justify-content:center;
+    }
+    #contact-form{
+        display: flex; 
+        justify-content: end;
+    }
+    #contact form{
+        display: flex; 
+        flex-direction: row; 
+        flex-wrap: wrap;
+    }
+    #contact{
+        width: 60%; 
+    }
+    #contact label{ 
+        width: 15%;
+        margin: 10px;
+    }
+
+    #form-submit{
+        width: 30%; 
     }
     #contributor{
         width: 100%;
@@ -135,4 +215,6 @@ img{
     #footer div{
         margin: 10px; 
     }
+
+    
 }
