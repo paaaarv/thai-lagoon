@@ -149,6 +149,8 @@ img{
     align-content: center;
 }
 #contact input, #contact textarea{
+    font-family: "EB Garamond", serif; 
+    font-size: 1em; 
     width: 70%;
 }
 
@@ -164,6 +166,9 @@ img{
 
 
 #form-submit{
+    font-family: "EB Garamond", serif; 
+    color: var(--blue);
+    font-size: 1.5em;
     padding: 20px 10px; 
     width: 80%; 
     background-color: var(--white); 
@@ -207,6 +212,10 @@ img{
 
     #form-submit{
         width: 30%; 
+    }
+
+    #menu{
+        background-color: var(--white); 
     }
     #contributor{
         width: 100%;
