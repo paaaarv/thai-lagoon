@@ -165,6 +165,7 @@ img{
 }
 
 
+
 #form-submit{
     font-family: "EB Garamond", serif; 
     color: var(--blue);
@@ -216,6 +217,24 @@ img{
 
     #menu{
         background-color: var(--white); 
+        margin-bottom: 20px;
+    }
+
+    #fav-dish-container{
+        display: flex; 
+        justify-content: space-evenly;
+    }
+    .fav-dish{
+        display: flex; 
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .dish-img img{
+        height: 200px; 
+        width: 200px;
+        object-fit:cover;
+        border: 1px solid var(--blue);
     }
     #contributor{
         width: 100%;
