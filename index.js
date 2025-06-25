@@ -49,11 +49,13 @@ const noodles = [ {
     name: 'Basil Fried Rice', 
     price: '$12.50', 
     description: 'Thai styled fried rice with basil leaves, chili peppers, bell pepper and onion'
-  {
+  },
+    {
     name: 'Pad Kee-Mow',
     price: '$12.50',
     description: 'Wide rice noodle stir-fried with tomatoes, onions, bean sprouts, jalapeno, bell pepper and basil leaves in brown sauce'
   }]; 
+
 const curry = [{
     name: 'Yellow Curry',
     price: '$13.00',
@@ -125,6 +127,30 @@ const drinks = [ {
     description: ''
   }]; 
 
+   const fullMenu = {
+    appetizers: appetizers, 
+    noodles: noodles, 
+    entrees: entrees, 
+    curry: curry, 
+    drinks: drinks
+  }
+
 function menuOptions(category){
-    console.log(category); 
+    const menuDiv = document.getElementById("menu-div");
+    menuDiv.innerHTML = ''; 
+    const heading = document.createElement('h3');
+    heading.textContent = category; 
+    menuDiv.appendChild(heading); 
+    const itemChoice = fullMenu[category];
+    itemChoice.forEach(item => {
+        const nameP = document.createElement('p'); 
+         nameP.textContent = item.name;
+        const priceP = document.createElement('p'); 
+         priceP.textContent = item.price;
+        const descriptionP = document.createElement('p'); 
+         descriptionP.textContent = item.descriptionP;
+        menuDiv.appendChild(nameP); 
+        menuDiv.appendChild(priceP); 
+        menuDiv.appendChild(descriptionP);
+    })
 } 
