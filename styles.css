@@ -76,11 +76,11 @@ h1, h2, h3{
      margin-bottom: 20px;
 }
 h1{
-    font-size: 2em; 
+    font-size: 2.2em; 
     text-align: center;
 }
 h2{
-    font-size: 1.5em; 
+    font-size: 1.75em; 
 }
 h3{
     font-size: 1.5em; 
@@ -88,6 +88,7 @@ h3{
 }
 h4{
     font-size: 1.2em; 
+    margin: 20px;
 }
 img{
     object-fit: contain;
@@ -179,7 +180,7 @@ img{
     margin: 100px auto; 
 }
 
-#contact h2{
+#contact h2, #menu h2{
     text-align: center;
     margin-bottom: 50px;
 }
@@ -222,6 +223,24 @@ img{
     border-radius: 10px;
     margin: 10px auto;
 }
+
+  #fav-dish-container{
+        display: flex; 
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-bottom: 50px;
+        padding: 50px 10px;
+        background-color: var(--blue); 
+        color: var(--white); 
+    }
+    .fav-dish{
+        width: 90%; 
+        margin: 20px auto; 
+        display: flex; 
+        flex-direction: column;
+    }
+
 /* desktop size queries */ 
 @media screen and (min-width: 768px){
 
@@ -275,17 +294,6 @@ img{
         padding-bottom: 20px;
     }
 
-    #fav-dish-container{
-        display: flex; 
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        text-align: center;
-        margin-bottom: 50px;
-    }
-    .fav-dish{
-        display: flex; 
-        flex-direction: column;
-    }
 
     .dish-img img{
         height: 300px; 
