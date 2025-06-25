@@ -171,8 +171,22 @@ img{
 #deals{
     flex-direction: row-reverse;
 }
+#contact{
+    background-color: var(--blue); 
+    color: var(--white);
+    padding: 20px; 
+    border-radius: 20px;
+    margin: 100px auto; 
+}
+
 #contact h2{
     text-align: center;
+    margin-bottom: 50px;
+}
+#form {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
 }
  #contact input, #contact textarea{
         background-color: var(--white); 
@@ -182,26 +196,19 @@ img{
         margin: 10px;
     }
 #contact label{
-    color: var(--white);
     font-size: 1.5em; 
     align-content: center;
 }
 #contact input, #contact textarea{
     font-family: "EB Garamond", serif; 
-    font-size: 1em; 
-    width: 70%;
+    font-size: 1.5em; 
 }
-
-#contact-form{
-    background-color: var(--blue); 
-    padding: 40px; 
-    border-radius: 20px;
+#contact input{
+    width: 60%;
 }
-
-#contact{
-    margin: 100px auto; 
+#contact textarea {
+    width: 100%;
 }
-
 
 
 #form-submit{
@@ -209,14 +216,14 @@ img{
     color: var(--blue);
     font-size: 1.5em;
     padding: 20px 10px; 
-    width: 80%; 
+    width: 95%; 
     background-color: var(--white); 
     border: 5px solid var(--seafoam);
     border-radius: 10px;
     margin: 10px auto;
 }
 /* desktop size queries */ 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 768px){
 
     #hamburger{
         display: none;
