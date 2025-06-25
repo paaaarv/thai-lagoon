@@ -143,14 +143,17 @@ function menuOptions(category){
     menuDiv.appendChild(heading); 
     const itemChoice = fullMenu[category];
     itemChoice.forEach(item => {
-        const nameP = document.createElement('p'); 
+        const itemDiv = document.createElement('div'); 
+        itemDiv.classList.add('food-item-div');
+        const nameP = document.createElement('h4'); 
          nameP.textContent = item.name;
         const priceP = document.createElement('p'); 
          priceP.textContent = item.price;
         const descriptionP = document.createElement('p'); 
-         descriptionP.textContent = item.descriptionP;
-        menuDiv.appendChild(nameP); 
-        menuDiv.appendChild(priceP); 
-        menuDiv.appendChild(descriptionP);
+         descriptionP.textContent = item.description;
+        itemDiv.appendChild(nameP); 
+        itemDiv.appendChild(priceP); 
+        itemDiv.appendChild(descriptionP);
+        menuDiv.appendChild(itemDiv); 
     })
 } 
