@@ -57,8 +57,10 @@ table {
   --white: #E1E0C9;
   --blue: #204D61;
 }
+
+/* mobile first queries */ 
+
 html{
-     max-width: 1280px;
     margin: auto;
 }
 
@@ -71,19 +73,17 @@ body{
 
 h1, h2, h3{
      font-family: "Merienda", sans-serif; 
+     margin-bottom: 20px;
 }
 h1{
-    font-size: 3em; 
-    margin-bottom: 10px;
+    font-size: 2em; 
     text-align: center;
 }
 h2{
-    font-size: 2em; 
-    margin-bottom: 20px;
+    font-size: 1.5em; 
 }
 h3{
     font-size: 1.5em; 
-    margin-bottom: 20px;
     width: 100%;
 }
 h4{
@@ -93,6 +93,7 @@ img{
     object-fit: contain;
     max-width:100%;
 }
+
 #heading, #footer{
     background-color: var(--blue); 
     color: var(--white); 
@@ -107,16 +108,37 @@ img{
     width: 10%;
     height: auto; 
 }
-#navigation {
-    width: 60%;
+#heading h1{
+    margin: 0;
+}
+#hamburger{
+    width: 50px; 
+    height: 50px; 
+    background: none;
+    border: none;
+    position: relative; 
+    right: -50px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-end;
+    gap: 4px; 
+    z-index: 1000; 
+}
+#hamburger span {
+    display: block; 
+    height: 4px; 
+    width: 75%; 
+    background: var(--white); 
+}
+#navigation ul{
+    display: none; 
 }
 #navigation a{
     text-decoration: none; 
     color: var(--white);
 }
 #home-page-img{
-    height: 100vh; 
-    overflow: hidden;
     margin-bottom: 20px;
 }
 #home-page-img img{
@@ -128,15 +150,23 @@ img{
     align-items: center;
 }
 .image-container img, #maps{ 
-     max-height: 500px;
+    max-height: 500px;
     height: auto;
     width: auto;
     border-radius: 20px;
+    margin: auto;
     border: 10px solid var(--blue);
 }
 
 .placeholder{
     margin-bottom: 20px;
+}
+#home h2, #home p{
+    width: 90%; 
+    margin: 10px auto;
+}
+#home p{
+    margin-bottom: 40px; 
 }
 #deals{
     flex-direction: row-reverse;
@@ -188,11 +218,20 @@ img{
 /* desktop size queries */ 
 @media screen and (min-width: 850px){
 
+    #hamburger{
+        display: none;
+    }
+    #navigation {
+        width: 60%;
+    }
     #navigation ul{
         display: flex; 
         justify-content: space-evenly; 
     }
-
+    #home-page-img{
+        height: 100vh; 
+        overflow: hidden;
+    }
     .p-section{
     width: 35%;
     align-self: center;
