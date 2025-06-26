@@ -100,11 +100,14 @@ img{
     color: var(--white); 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 10px;
     align-items: center;
     text-align: center;
 } 
+#heading{
+    position: relative; 
+}
 #heading img{
     width: 10%;
     height: auto; 
@@ -123,6 +126,7 @@ img{
     flex-direction: column; 
     justify-content: center;
     align-items: flex-end;
+    cursor: pointer;
     gap: 4px; 
     z-index: 1000; 
 }
@@ -131,13 +135,52 @@ img{
     height: 4px; 
     width: 75%; 
     background: var(--white); 
+    transition: all 0.3s ease;
 }
-#navigation ul{
+/*hamburger transition */
+ #hamburger.open span:nth-child(1){
+    transform: translateY(4px) rotate(45deg); 
+ }
+ #hamburger.open span:nth-child(2) {
     display: none; 
+ }
+ #hamburger.open span:nth-child(3){
+    transform: translateY(-4px) rotate(-45deg); 
+ }
+
+#navigation ul {
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    right: 0; 
+    background: var(--white); 
+    box-shadow: 0 2px 8px var(--blue);
+    z-index: 2000; 
+    overflow: hidden; 
+    max-height: 0; 
+    opacity: 0; 
+    transform: translateY(-10px); 
+    pointer-events: none; 
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+}
+
+#navigation.open ul {
+    max-height: 500px; 
+    opacity: 1; 
+    transform: translateY(0); 
+    pointer-events: auto;
+    display: block; 
+}
+#navigation li{
+    padding: 10px; 
+    margin: 20px 0 0; 
+    border-bottom: 1px solid var(--blue);
 }
 #navigation a{
     text-decoration: none; 
-    color: var(--white);
+    color: var(--blue);
 }
 #home-page-img{
     margin-bottom: 20px;
@@ -184,11 +227,7 @@ img{
     text-align: center;
     margin-bottom: 50px;
 }
-#form {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-evenly;
-}
+
  #contact input, #contact textarea{
         background-color: var(--white); 
         border: 5px solid var(--seafoam); 
@@ -197,17 +236,18 @@ img{
         margin: 10px;
     }
 #contact label{
-    font-size: 1.5em; 
+    font-size: 1.2em; 
     align-content: center;
 }
 #contact input, #contact textarea{
     font-family: "EB Garamond", serif; 
-    font-size: 1.5em; 
+    font-size: 1.2em; 
 }
-#contact input{
-    width: 60%;
+#form div{
+    width: 100%;
+    display: flex; 
 }
-#contact textarea {
+#form input, #form textarea {
     width: 100%;
 }
 
@@ -221,7 +261,7 @@ img{
     background-color: var(--white); 
     border: 5px solid var(--seafoam);
     border-radius: 10px;
-    margin: 10px auto;
+    margin: 20px;
 }
 
   #fav-dish-container{
@@ -276,6 +316,14 @@ img{
     }
     .food-item-div :last-child{
         width:  100%;
+    }
+
+    #contributor{
+        width: 100%;
+    }
+
+    #footer div{
+        margin: 10px; 
     }
 
 /* desktop size queries */ 
@@ -353,7 +401,5 @@ img{
 
     #footer div{
         margin: 10px; 
-    }
-
-    
+    }  
 }

@@ -1,3 +1,30 @@
+//mobile hamburger menu click 
+
+const hamburger = document.getElementById('hamburger'); 
+const navMenu = document.getElementById('navigation'); 
+
+function closeMenu(){
+    navMenu.classList.remove('open'); 
+    hamburger.classList.remove('open'); 
+    hamburger.setAttribute('aria-expanded', 'false'); 
+}
+hamburger.addEventListener('click', (e) =>{
+    e.stopPropagation(); 
+    const isOpen = navMenu.classList.toggle('open'); 
+    hamburger.classList.toggle('open'); 
+    hamburger.setAttribute('aria-expanded', isOpen); 
+    navMenu.setAttribute('aria-hidden', !isOpen); 
+});
+
+navMenu.querySelectorAll('a').forEach(option =>{
+    option.addEventListener('click', closeMenu); 
+}); 
+
+document.addEventListener('click', (e) => {
+    if( navMenu.classList.contains('open')){
+        closeMenu();
+    }
+}); 
 
 // contact form functions 
 
