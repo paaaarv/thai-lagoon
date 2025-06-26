@@ -392,7 +392,9 @@ img{
         width: 15%;
         margin: 10px;
     }
-
+    #form{
+        justify-content: flex-end;
+    }
     #form-submit{
         width: 30%; 
     }
