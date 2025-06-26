@@ -201,7 +201,9 @@ img{
     margin: auto;
     border: 10px solid var(--blue);
 }
-
+#home, #contact, #menu {
+    padding-top: 50px;
+}
 .placeholder{
     margin-bottom: 20px;
 }

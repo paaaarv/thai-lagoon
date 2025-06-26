@@ -166,7 +166,7 @@ function menuOptions(category){
     const menuDiv = document.getElementById("menu-div");
     menuDiv.innerHTML = ''; 
     const heading = document.createElement('h3');
-    heading.textContent = category; 
+    heading.textContent = category.toUpperCase(); 
     menuDiv.appendChild(heading); 
     const itemChoice = fullMenu[category];
     itemChoice.forEach(item => {
