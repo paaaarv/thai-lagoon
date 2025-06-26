@@ -28,16 +28,28 @@ document.addEventListener('click', (e) => {
 
 // contact form functions 
 
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegex = /^\d{10}$/;
+
 function validateForm(event) {
     event.preventDefault(); 
-    const name = document.getElementById("name");
+    const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
-    const comments = document.getElementById("comments");
+    const comments = document.getElementById("comments").value;
     let errorsDiv = document.getElementById('errorsDiv'); 
+    errorsDiv.innerHTML = '';
     let thankYouDiv = document.getElementById('thankYouDiv');
-    let validated = true; 
-
+    thankYouDiv.innerHTML = '';
+    if ((!emailRegex.test(email) && !phoneRegex.test(phone))){ 
+        let errorsP = document.createElement('h4'); 
+        errorsP.textContent = "Please enter a valid email or phone number"; 
+        errorsDiv.appendChild(errorsP); 
+    }else{
+        let thankYouP = document.createElement('h4'); 
+        thankYouP.textContent = `Thank you, ${name}! We will respond to you shortly!`;
+        thankYouDiv.appendChild(thankYouP);
+    }
 }
 
 //menu buttons arrays / functions

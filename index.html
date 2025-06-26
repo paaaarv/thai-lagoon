@@ -67,11 +67,11 @@
             <h2>Contact Us</h2>
             <div id="contact-form">
                 <form id="form" onsubmit="validateForm(event)"> 
+                    <div id="errorsDiv"></div>
                     <div>
                         <label for="name"> Name:</label>
                         <input type="text" id="name" required autocomplete="name"></input>
                     </div>
-                    <div id="errorsDiv"></div>
                     <div>
                         <label for="email">Email:</label>
                         <input type="email" id="email" autocomplete="email"></input>
@@ -85,7 +85,7 @@
                         <textarea id="comments" rows="5" required>
                         </textarea>
                     </div>
-                    <button type="submit" id="form-submit">Submit </button> 
+                    <button type="submit" id="form-submit" ">Submit </button> 
                     <div id="thankYouDiv"></div>
                 </form> 
             </div>
