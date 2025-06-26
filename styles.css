@@ -89,18 +89,20 @@ body{
 
 h1, h2, h3{
      font-family: "Merienda", sans-serif; 
-     margin-bottom: 20px;
 }
 h1{
     font-size: 2.2em; 
     text-align: center;
+    
 }
 h2{
     font-size: 1.75em; 
+    margin-bottom: 20px;
 }
 h3{
     font-size: 1.5em; 
     width: 100%;
+    margin-bottom: 20px;
 }
 h4{
     font-size: 1.2em; 
@@ -129,9 +131,7 @@ img{
     width: 10%;
     height: auto; 
 }
-#heading h1{
-    margin: 0;
-}
+
 #hamburger{
     width: 50px; 
     height: 50px; 
@@ -355,10 +355,20 @@ img{
     }
     #navigation {
         width: 60%;
+
     }
     #navigation ul{
-        display: flex; 
+        min-height: fit-content;
+        background-color: transparent;
+        display: flex !important; 
         justify-content: space-evenly; 
+        position:relative !important; 
+        opacity: 1 !important; 
+        pointer-events: auto;
+
+    }
+    #navigation a{
+        color: var(--white); 
     }
     #home-page-img{
         height: 100vh; 
